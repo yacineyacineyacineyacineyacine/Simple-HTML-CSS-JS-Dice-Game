@@ -21,7 +21,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
        diceDOM.style.display = 'block';
        diceDOM.src = 'dice-' + dice +'.png';
 
-   // update the current IF the number geerated by the dice not equal 1
+       // update the current IF the number geerated by the dice not equal 1
      if (dice === 6 && lastDice === 6) {
         scores[activePlayer] = 0;
         document.querySelector('#score-' + activePlayer ).textContent = '0';
@@ -49,8 +49,15 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 
       // update the UI and give the hund to the next player
       document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+      var input = document.querySelector('.final-score').value;
+      var winningScore;
       //check if the player won the game
-      if (scores[activePlayer] >= 100) {
+      if (input) {
+         winningScore = input;
+      }else {
+         winningScore = 100;
+      }
+      if (scores[activePlayer] >= winningScore) {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
         document.querySelector('.dice').style.display = 'none'
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');

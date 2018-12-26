@@ -1,0 +1,6 @@
+1/ the player looses his entire score after two six in a row.
+solution /: use another variable.
+2/ add an input field to the HTML page to set the winning score to enable then to change the predefined score ;
+solution : button => prompt => enter the value of the winning score, fetch and update the value in the condition
+           check in the addEventListener of the button hold.
+3/ add two dices and the palyer loose his score if one of them is a 1            
