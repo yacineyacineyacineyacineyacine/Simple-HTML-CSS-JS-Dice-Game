@@ -18,8 +18,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
    // display the result
-       document.getElementById('dice-1').style.dispaly = 'block';
-       document.getElementById('dice-2').style.dispaly = 'block';
+       document.getElementById('dice-1').style.display = 'block';
+       document.getElementById('dice-2').style.display = 'block';
 
        document.getElementById('dice-1').src = 'dice-' + dice1 +'.png';
        document.getElementById('dice-2').src = 'dice-' + dice2 +'.png';
@@ -62,8 +62,8 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
       }
       if (scores[activePlayer] >= winningScore) {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
-        document.getElementById('#dice-1').style.dispaly = 'none';
-        document.getElementById('#dice-2').style.dispaly = 'none';
+        document.getElementById('dice-1').style.display = 'none';
+        document.getElementById('dice-2').style.display = 'none';
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
         document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
         gamePlaying =false;
@@ -82,8 +82,8 @@ function nextPlayer(){
   document.getElementById('current-1').textContent = '0';
   document.querySelector('.player-0-panel').classList.toggle('active');
   document.querySelector('.player-1-panel').classList.toggle('active');
-  document.getElementById('dice-1').style.dispaly = 'none';
-  document.getElementById('dice-2').style.dispaly = 'none';
+  document.getElementById('dice-1').style.display = 'none';
+  document.getElementById('dice-2').style.display = 'none';
 
 
 };
@@ -104,8 +104,8 @@ function init(){
   score1.textContent = '0';
   current0.textContent ='0';
   current1.textContent = '0';
-  document.getElementById('dice-1').style.dispaly = 'none';
-  document.getElementById('dice-2').style.dispaly = 'none';
+  document.getElementById('dice-1').style.display = 'none';
+  document.getElementById('dice-2').style.display = 'none';
   document.getElementById('name-0').textContent = 'Player 1';
   document.getElementById('name-1').textContent = 'Player 2';
   document.querySelector('.player-0-panel').classList.remove('winner');
